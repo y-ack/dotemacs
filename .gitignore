@@ -1,0 +1,11 @@
+.#*
+.*
+auto-save-list/
+.cache/
+
+elpa/
+etc/
+games/
+snippets/
+straight/
+var/
