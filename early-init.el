@@ -22,13 +22,16 @@
 (setenv "LSP_USE_PLISTS" "true")
 
 ;; The default is 800 kilobytes.  Measured in bytes.
-(setq gc-cons-threshold 100000000) ;; 100MB
+(setq gc-cons-threshold 100000000) ;; 1000MB
 
 ;; default is 4k.  some ls resp in 800k-3M range
 (setq read-process-output-max (* 1024 1024)) ;; 1MB
 
 ;; disable package.el at startup for straight
 (setq package-enable-at-startup nil)
+
+;; disable some byte compiler warning noise
+(setq byte-compile-warnings '(not free-vars unresolved noruntime lexical make-local))
 
 ;; UnsetFNHA
 (defvar file-name-handler-alist-original file-name-handler-alist)
